@@ -1,0 +1,262 @@
+
+
+/* ENTIRE PAGE */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* PAGE */
+
+.page{
+    display: grid;
+    height: 100vh;
+    grid-template: 1fr 4fr / 1fr 5fr;
+    grid-template-areas:
+    "sidebar header"
+    "sidebar content";
+}
+
+/* HEADER */
+
+#header{
+    grid-area: header;
+    box-shadow: 2px 2px 20px rgba(128, 128, 128, 0.2);
+}
+
+.top-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 10px 40px 5px 40px;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.search-icon{
+    opacity: 0.75;
+    position: relative;
+    top: 4px;
+}
+
+.search-box{
+    background-color: rgba(128, 128, 128, 0.2);
+    border-radius: 25px;
+    height: 25px;
+    width: 450px;
+}
+
+.top-info{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.name{
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.bottom-header{
+    margin: 15px 40px 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-top{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.greeting{
+    font-size: 0.6rem;
+}
+
+.text{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 75px;
+}
+
+.icons{
+    background-color: rgba(0, 4, 255, 0.65);
+    padding: 7.5px 20px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    height: 34px;
+    width: auto;
+    color: white;
+}
+
+/* SIDEBAR */
+
+#sidebar{
+    background-color: rgba(0, 4, 255, 0.7);
+    grid-area: sidebar;
+    color: white;
+    text-align: center;
+}
+
+.sidebar-heading h2 a{
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-heading{
+    margin: 20px 0 40px 0;
+    font-size: 1.2rem;
+}
+
+.sidebar-options ul{
+    list-style: none;
+}
+
+.first-sidebar-list{
+    margin-bottom: 40px;
+}
+
+.first-sidebar-list li,
+.second-sidebar-list li{
+    padding: 7.5px;
+    text-align: left;
+}
+
+/* MAIN CONTENT*/
+
+#main-content{
+    background-color: rgba(128, 128, 128, 0.2);
+    grid-area: content;
+    display: grid;
+    gap: 20px;
+    padding: 20px 20px 30px 20px;
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 2fr 2fr 1fr;
+    grid-template-areas: 
+    "projects projects announcements"
+    "projects projects announcements"
+    "projects projects announcements"
+    "projects projects trending"
+    "projects projects trending"
+    "projects projects trending"
+    ;
+}
+
+#your-projects,
+#announcements,
+#trending{
+    box-shadow: 2px 2px 20px rgba(128, 128, 128, 0.2);
+}
+
+.content-headings{
+    font-size: 0.9rem;
+    background-color: rgba(128, 128, 128, 0.25);
+    padding-bottom: 5px
+}
+
+#your-projects{
+    background-color: white;
+    grid-area: projects;
+}
+
+.boxes{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 20px;
+    background-color: rgba(128, 128, 128, 0.25);
+}
+
+.box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 7.5px;
+    border-left: 5px gold solid;
+    box-shadow: 2px 2px 20px rgba(128, 128, 128, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.title{
+    font-size: 0.8rem;
+}
+
+.text{
+    font-size: 0.75rem;
+    font-weight: 200;
+}
+
+.icons-box{
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+#announcements{
+    background-color: white;
+    grid-area: announcements;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+#ann-head{
+    background-color: rgba(128, 128, 128, 0.0);
+}
+
+.announcement-content{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.space{
+    font-weight: 100;
+    text-align: center;
+    font-size: 10px;
+}
+
+.ac-text{
+    border-radius: 10px;
+}
+
+.ac-text h4{
+    font-size: 0.7rem;
+    padding-left: 10px;
+}
+
+.ac-text p{
+    font-size: 0.6rem;
+    padding-left: 10px;
+    font-weight: 200;
+}
+
+#first-p{
+    padding-top: 20px;
+}
+
+#last-p{
+    padding-bottom: 20px;
+}
+
+#trending{
+    background-color: white;
+    grid-area: trending;
+}
